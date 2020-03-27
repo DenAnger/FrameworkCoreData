@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E266" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AbstractVehicle" representedClassName="AbstractVehicle" isAbstract="YES" syncable="YES">
+        <attribute name="cargoCapacity" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="consumables" attributeType="String"/>
+        <attribute name="costinCredits" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="created" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="crew" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="edited" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="films" attributeType="Transformable" customClassName="[Int]"/>
+        <attribute name="id" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="length" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="manufacturer" attributeType="String"/>
+        <attribute name="maxAtmospheringSpeed" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="model" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="passengers" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="pilots" attributeType="Transformable" customClassName="[Int]"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="People" representedClassName="People" syncable="YES">
+        <attribute name="birthYear" attributeType="String"/>
+        <attribute name="created" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="edited" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="eyeColor" attributeType="String"/>
+        <attribute name="films" attributeType="Transformable" customClassName="[Int]"/>
+        <attribute name="gender" attributeType="String"/>
+        <attribute name="hairColor" attributeType="String"/>
+        <attribute name="height" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="homeworldId" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="mass" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="skinColor" attributeType="String"/>
+        <attribute name="speciesId" attributeType="Transformable" customClassName="[Int]"/>
+        <attribute name="starshipsId" attributeType="Transformable" customClassName="[Int]"/>
+        <attribute name="vehiclesId" attributeType="Transformable" customClassName="[Int]"/>
+        <relationship name="homeworld" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Planet" inverseName="residents" inverseEntity="Planet"/>
+        <relationship name="species" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Specie" inverseName="peoples" inverseEntity="Specie"/>
+        <relationship name="starships" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Starship" inverseName="pilot" inverseEntity="Starship"/>
+        <relationship name="vehicles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Vehicle" inverseName="pilot" inverseEntity="Vehicle"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Planet" representedClassName="Planet" syncable="YES">
+        <attribute name="climate" attributeType="String"/>
+        <attribute name="created" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="diameter" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="edited" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="films" attributeType="Transformable" customClassName="[Int]"/>
+        <attribute name="gravity" attributeType="String"/>
+        <attribute name="id" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="orbitaPeriod" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="population" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="residentsId" attributeType="Transformable" customClassName="[Int]"/>
+        <attribute name="rotationPeriod" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="surfaceWater" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="terrian" attributeType="String"/>
+        <relationship name="residents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="People" inverseName="homeworld" inverseEntity="People"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Specie" representedClassName="Specie" syncable="YES">
+        <attribute name="averageHeight" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="averageLifespan" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="classification" attributeType="String"/>
+        <attribute name="created" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="designation" attributeType="String"/>
+        <attribute name="edited" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="eyeColor" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="films" attributeType="Transformable" customClassName="[Int]"/>
+        <attribute name="hairColor" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="homeworldId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="language" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="peoplesId" attributeType="Transformable" customClassName="[Int]"/>
+        <attribute name="skinColors" attributeType="Transformable" customClassName="[String]"/>
+        <relationship name="homeworld" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Planet"/>
+        <relationship name="peoples" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="People" inverseName="species" inverseEntity="People"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Starship" representedClassName="Starship" parentEntity="AbstractVehicle" syncable="YES">
+        <attribute name="hyperdriveRating" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="mglt" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="starshipClass" attributeType="String"/>
+        <relationship name="pilot" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="People" inverseName="starships" inverseEntity="People"/>
+    </entity>
+    <entity name="Vehicle" representedClassName="Vehicle" parentEntity="AbstractVehicle" syncable="YES">
+        <attribute name="vehicleClass" attributeType="String"/>
+        <relationship name="pilot" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="People" inverseName="vehicles" inverseEntity="People"/>
+    </entity>
+    <elements>
+        <element name="AbstractVehicle" positionX="-40.6640625" positionY="-15.42578125" width="128" height="268"/>
+        <element name="People" positionX="-193.01171875" positionY="-18.68359375" width="128" height="343"/>
+        <element name="Planet" positionX="-340.59765625" positionY="-212" width="128" height="268"/>
+        <element name="Specie" positionX="-342.671875" positionY="103.484375" width="128" height="298"/>
+        <element name="Starship" positionX="-40.8046875" positionY="-155.0703125" width="128" height="103"/>
+        <element name="Vehicle" positionX="-32.0546875" positionY="314.33203125" width="128" height="73"/>
+    </elements>
+</model>
