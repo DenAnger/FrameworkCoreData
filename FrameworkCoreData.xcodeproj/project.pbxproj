@@ -99,14 +99,14 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		69260651242DC94B00B7A5D7 /* Supports */ = {
+		69260651242DC94B00B7A5D7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				69418119242CC2B0005C30F8 /* AppDelegate.swift */,
 				6941811B242CC2B0005C30F8 /* SceneDelegate.swift */,
 				6941812A242CC2B3005C30F8 /* Info.plist */,
 			);
-			path = Supports;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		69260652242DCE1300B7A5D7 /* Views */ = {
@@ -141,7 +141,7 @@
 				6941811D242CC2B0005C30F8 /* ViewController.swift */,
 				69260652242DCE1300B7A5D7 /* Views */,
 				69260650242DC8E500B7A5D7 /* Sources */,
-				69260651242DC94B00B7A5D7 /* Supports */,
+				69260651242DC94B00B7A5D7 /* Supporting Files */,
 			);
 			path = FrameworkCoreData;
 			sourceTree = "<group>";
