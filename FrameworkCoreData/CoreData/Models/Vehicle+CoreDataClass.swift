@@ -1,5 +1,5 @@
 //
-//  Starship+CoreDataClass.swift
+//  Vehicle+CoreDataClass.swift
 //  FrameworkCoreData
 //
 //  Created by Denis Abramov on 27.03.2020.
@@ -7,9 +7,8 @@
 //
 //
 
-import Foundation
 import CoreData
 
-@objc(Starship)
-public class Starship: AbstractVehicle {
+@objc(Vehicle)
+public class Vehicle: AbstractVehicle {
 }

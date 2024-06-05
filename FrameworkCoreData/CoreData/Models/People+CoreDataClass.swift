@@ -1,5 +1,5 @@
 //
-//  Specie+CoreDataClass.swift
+//  People+CoreDataClass.swift
 //  FrameworkCoreData
 //
 //  Created by Denis Abramov on 27.03.2020.
@@ -7,9 +7,8 @@
 //
 //
 
-import Foundation
 import CoreData
 
-@objc(Specie)
-public class Specie: NSManagedObject {
+@objc(People)
+public class People: NSManagedObject {
 }

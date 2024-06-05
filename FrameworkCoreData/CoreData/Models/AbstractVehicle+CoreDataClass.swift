@@ -1,5 +1,5 @@
 //
-//  Planet+CoreDataClass.swift
+//  AbstractVehicle+CoreDataClass.swift
 //  FrameworkCoreData
 //
 //  Created by Denis Abramov on 27.03.2020.
@@ -7,9 +7,8 @@
 //
 //
 
-import Foundation
 import CoreData
 
-@objc(Planet)
-public class Planet: NSManagedObject {
+@objc(AbstractVehicle)
+public class AbstractVehicle: NSManagedObject {
 }

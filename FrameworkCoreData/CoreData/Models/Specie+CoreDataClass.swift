@@ -1,5 +1,5 @@
 //
-//  AbstractVehicle+CoreDataClass.swift
+//  Specie+CoreDataClass.swift
 //  FrameworkCoreData
 //
 //  Created by Denis Abramov on 27.03.2020.
@@ -7,9 +7,8 @@
 //
 //
 
-import Foundation
 import CoreData
 
-@objc(AbstractVehicle)
-public class AbstractVehicle: NSManagedObject {
+@objc(Specie)
+public class Specie: NSManagedObject {
 }

@@ -1,5 +1,5 @@
 //
-//  People+CoreDataClass.swift
+//  Starship+CoreDataClass.swift
 //  FrameworkCoreData
 //
 //  Created by Denis Abramov on 27.03.2020.
@@ -7,9 +7,8 @@
 //
 //
 
-import Foundation
 import CoreData
 
-@objc(People)
-public class People: NSManagedObject {
+@objc(Starship)
+public class Starship: AbstractVehicle {
 }

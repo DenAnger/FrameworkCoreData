@@ -122,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				69418118242CC2B0005C30F8 /* FrameworkCoreData */,
-				6926064E242DC7F900B7A5D7 /* CoreData */,
 				69418117242CC2B0005C30F8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -138,12 +137,21 @@
 		69418118242CC2B0005C30F8 /* FrameworkCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				6941811D242CC2B0005C30F8 /* ViewController.swift */,
+				69B55F4C2C10B8920077584C /* Controllers */,
 				69260652242DCE1300B7A5D7 /* Views */,
+				6926064E242DC7F900B7A5D7 /* CoreData */,
 				69260650242DC8E500B7A5D7 /* Sources */,
 				69260651242DC94B00B7A5D7 /* Supporting Files */,
 			);
 			path = FrameworkCoreData;
+			sourceTree = "<group>";
+		};
+		69B55F4C2C10B8920077584C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6941811D242CC2B0005C30F8 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
